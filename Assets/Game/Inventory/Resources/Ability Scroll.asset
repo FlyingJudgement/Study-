@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20eb1792e8048a46bf5c7c520a3ea3b, type: 3}
-  m_Name: Dagger
+  m_Script: {fileID: 11500000, guid: be8358f0fcfcb22418d7b5d788e02cc4, type: 3}
+  m_Name: Ability Scroll
   m_EditorClassIdentifier: 
-  itemID: 1ca8bcb6-3995-44fb-97a9-15c60fe159e9
-  displayName: Dagger
-  description: Stab your enemies in the back, like the coward you are!
-  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  itemID: 9c948853-c63b-4635-8e18-b03dd4fc0c4d
+  displayName: Ability Scroll
+  description: Read this and you will get magical abilites. Honest guv!
+  icon: {fileID: 21300000, guid: a1ec2c0ddc0da634b85f0f465fec2d0d, type: 3}
   pickup: {fileID: 6494234044896430859, guid: ab73185f2dadf4445ae07e78eb669c1f, type: 3}
-  stackable: 0
-  allowedEquipLocation: 5
+  stackable: 1
+  consumable: 0
