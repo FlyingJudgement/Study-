@@ -4,5 +4,21 @@ using UnityEngine;
 
 public class SeedManager : MonoBehaviour
 {
-    public GeneralSeedFunction[] allSeeds; 
+    private int seedcount;
+    [SerializeField] GeneralSeedFunction generalSeedFunction;
+    public ScriptableSeed[] allSeeds; 
+
+private void Start() 
+    {
+        if(seedcount<0){seedcount=0;}
+        else if (seedcount<allSeeds.Length){seedcount = allSeeds.Length;}
+        foreach(var seed in allSeeds)
+        {
+             if (seedcount !> allSeeds.Length) 
+             {generalSeedFunction.scriptableSeed =
+             allSeeds[seedcount];
+             seedcount ++;}
+        }
+    }
 }
+

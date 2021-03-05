@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd65490e790ff644c8a85c8b2404b9fd, type: 3}
-  m_Name: ScriptableSeed
+  m_Name: FrontBeat
   m_EditorClassIdentifier: 
-  seedName: 
-  seedlingSound: {fileID: 0}
-  UIseed: {fileID: 0}
-  seedPickup: {fileID: 0}
+  seedName: Purple
+  seedlingSound: {fileID: 8300000, guid: 3e0f384b461bb47e08862111db4b8bfc, type: 3}
+  UIseed: {fileID: 21300000, guid: 65d466afcff75fa428a0b237f81846d6, type: 3}
+  seedPickup: {fileID: 4300000, guid: d671f15d904c3f64e8c432542700c1f4, type: 3}

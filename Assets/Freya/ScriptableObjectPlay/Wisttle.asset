@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd65490e790ff644c8a85c8b2404b9fd, type: 3}
   m_Name: Wisttle
   m_EditorClassIdentifier: 
-  seedName: 
+  seedName: Crystal
   seedlingSound: {fileID: 0}
   UIseed: {fileID: 0}
   seedPickup: {fileID: 0}

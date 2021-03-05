@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd65490e790ff644c8a85c8b2404b9fd, type: 3}
   m_Name: Horn
   m_EditorClassIdentifier: 
-  seedName: 
-  seedlingSound: {fileID: 0}
-  UIseed: {fileID: 0}
-  seedPickup: {fileID: 0}
+  seedName: Grey
+  seedlingSound: {fileID: 8300000, guid: b8c68be3679194f7db6843031ba561eb, type: 3}
+  UIseed: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  seedPickup: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}

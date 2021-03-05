@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd65490e790ff644c8a85c8b2404b9fd, type: 3}
-  m_Name: ScriptableSeed 1
+  m_Name: Background
   m_EditorClassIdentifier: 
-  seedName: 
-  seedlingSound: {fileID: 0}
-  UIseed: {fileID: 0}
-  seedPickup: {fileID: 0}
+  seedName: NextSeed
+  seedlingSound: {fileID: 8300000, guid: cb38762152e9dac47b24b17207a85384, type: 3}
+  UIseed: {fileID: 21300000, guid: 373773b6623f4fb4c89ed91602df42dd, type: 3}
+  seedPickup: {fileID: 4300018, guid: d288a0e4a2d923b46898986e979da643, type: 3}

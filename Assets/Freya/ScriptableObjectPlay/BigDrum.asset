@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd65490e790ff644c8a85c8b2404b9fd, type: 3}
   m_Name: BigDrum
   m_EditorClassIdentifier: 
-  seedName: 
-  seedlingSound: {fileID: 0}
-  UIseed: {fileID: 0}
-  seedPickup: {fileID: 0}
+  seedName: Blue
+  seedlingSound: {fileID: 8300000, guid: 504b08d950be1cc4485b7f2d3f6b22d2, type: 3}
+  UIseed: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  seedPickup: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
