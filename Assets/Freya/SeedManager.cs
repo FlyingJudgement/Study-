@@ -5,11 +5,12 @@ using UnityEngine;
 public class SeedManager : MonoBehaviour
 {
     private int seedcount;
-    [SerializeField] GeneralSeedFunction generalSeedFunction;
+    [SerializeField] SeedPrefab generalSeedFunction;
     public ScriptableSeed[] allSeeds; 
 
 private void Start() 
     {
+        
         if(seedcount<0){seedcount=0;}
         else if (seedcount<allSeeds.Length){seedcount = allSeeds.Length;}
         foreach(var seed in allSeeds)

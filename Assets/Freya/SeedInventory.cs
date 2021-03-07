@@ -2,16 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+
+#endif
 public class SeedInventory : MonoBehaviour
 {
-    public static List<GeneralSeedFunction> seedInventory = new List<GeneralSeedFunction>();
+    public static List<SeedPrefab> seedInventory = new List<SeedPrefab>();
 
-    
+    #if UNITY_EDITOR
     private void OnDrawGizmos() {
-        foreach (GeneralSeedFunction seed in seedInventory)
+        foreach (SeedPrefab seed in seedInventory)
         {
-            Gizmos.DrawLine(transform.position, seed.transform.position);    
+            Vector3 inventoryPos = transform.position;
+            Vector3 seedPos = seed.transform.position;
+            float halfHeight = (inventoryPos.y - seedPos.y) * .5f;
+            Vector3 halfHeightVector = Vector3.up * halfHeight;  
+
+            Handles.DrawBezier(
+             inventoryPos,seedPos,
+             inventoryPos - halfHeightVector, seedPos + halfHeightVector,
+            Color.magenta,
+             EditorGUIUtility.whiteTexture, 2f);
             
         }    
     }
+    #endif
 }
