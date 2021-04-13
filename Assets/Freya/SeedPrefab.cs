@@ -13,7 +13,8 @@ public class SeedPrefab : MonoBehaviour
     
     private void OnDisable() => SeedInventory.seedInventory.Remove(this);
     public MaterialPropertyBlock mpb;
-    public MaterialPropertyBlock Mpb{
+  /*  public MaterialPropertyBlock Mpb
+    {
         get{
             if(mpb == null){
                 mpb = new MaterialPropertyBlock();
@@ -22,7 +23,7 @@ public class SeedPrefab : MonoBehaviour
         }
 
     }
-
+*/
 
         
     
