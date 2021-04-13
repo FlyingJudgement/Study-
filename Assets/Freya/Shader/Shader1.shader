@@ -3,7 +3,10 @@ Shader "Unlit/Shader1"
     Properties
     {
         //_MainTex ("Texture", 2D) = "white" {}
-        _Color( "_Color", Color ) = (1,1,1,1)
+        _ColorA( "ColorA", Color ) = (0.8,1,0.5,1)
+        _ColorB("ColorB", Color) = (1,0.5,0.8,1)
+        _ColorStart("ColorStart",Range(0,1)) = 0
+        _ColorEnd("ColorEnd",Range(0,1)) = 1
     }
     SubShader 
     {
@@ -14,7 +17,11 @@ Shader "Unlit/Shader1"
             #pragma vertex vert
             #pragma fragment frag
 
-            float4 _Color;
+            float _ColorStart;
+            float _ColorEnd;
+
+            float4 _ColorA;
+            float4 _ColorB;
 
             #include "UnityCG.cginc"
             
@@ -51,9 +58,17 @@ Shader "Unlit/Shader1"
                 return o;
             }
 
+            float InversLerp( float a , float b, float v )
+            {
+                return ( v-a )/( b-a );
+            }
+
             fixed4 frag ( Interpolateors i ) : SV_Target
             {
-                return float4 ( i.uv,0,1 );
+                float t = saturate ( InversLerp (_ColorStart, _ColorEnd, i.uv.x));
+                t = frac(t);
+                float4 ColorGradient = lerp ( _ColorA, _ColorB, t );
+                return ColorGradient;
             }
             ENDCG
         }
