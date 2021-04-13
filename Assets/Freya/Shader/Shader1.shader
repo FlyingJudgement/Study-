@@ -66,7 +66,7 @@ Shader "Unlit/Shader1"
             fixed4 frag ( Interpolateors i ) : SV_Target
             {
                 float t = saturate ( InversLerp (_ColorStart, _ColorEnd, i.uv.x));
-                t = frac(t);
+                //t = frac(t);
                 float4 ColorGradient = lerp ( _ColorA, _ColorB, t );
                 return ColorGradient;
             }
