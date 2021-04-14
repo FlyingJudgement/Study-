@@ -66,11 +66,12 @@ Shader "Unlit/Shader1"
 
             fixed4 frag ( Interpolateors i ) : SV_Target
             {
+                //return i.uv.y;
                // float t = saturate ( InversLerp (_ColorStart, _ColorEnd, i.uv.x));
  //               t = frac(t);
-                float yOffset = (i.uv.y) + (cos(i.uv.y * TAU * 8)* 0.02); 
-                float t = cos (( (cos(i.uv.x * TAU * 8 + _Time.y*0.01  )* 0.005)
-                 + yOffset + _Time.y * 0.05 ) * TAU * 8 ) * 0.5 +  0.5 ;
+                float xOffset = cos( i.uv.x * TAU * 8 ) * 0.01; 
+                float t = cos (( i.uv.y + xOffset - _Time.y * 0.1 ) * TAU * 5 ) *0.5 + 0.5;
+                 t *= 1 - i.uv.y; 
                 return  t ;
               //  float4 ColorGradient = lerp ( _ColorA, _ColorB, t );
               // return ColorGradient;
