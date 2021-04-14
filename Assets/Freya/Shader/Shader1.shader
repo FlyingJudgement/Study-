@@ -68,8 +68,9 @@ Shader "Unlit/Shader1"
             {
                // float t = saturate ( InversLerp (_ColorStart, _ColorEnd, i.uv.x));
  //               t = frac(t);
-                float2 t = cos ( i.uv.xy * TAU * 2 ) * 0.5 +  0.5 ;
-                return float4( t, 0,1 );
+                float yOffset = (i.uv.y) + (cos(i.uv.y * TAU * 8)* 0.02); 
+                float t = cos (( i.uv.x + yOffset ) * TAU * 8 ) * 0.5 +  0.5 ;
+                return  t ;
               //  float4 ColorGradient = lerp ( _ColorA, _ColorB, t );
               // return ColorGradient;
             }
