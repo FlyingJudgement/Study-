@@ -23,6 +23,7 @@ Shader "Unlit/Shader1"
             float4 _ColorA;
             float4 _ColorB;
 
+            #define TAU 6.28318530718
             #include "UnityCG.cginc"
             
   //          sampler2D _MainTex;
@@ -65,10 +66,12 @@ Shader "Unlit/Shader1"
 
             fixed4 frag ( Interpolateors i ) : SV_Target
             {
-                float t = saturate ( InversLerp (_ColorStart, _ColorEnd, i.uv.x));
-                //t = frac(t);
-                float4 ColorGradient = lerp ( _ColorA, _ColorB, t );
-                return ColorGradient;
+               // float t = saturate ( InversLerp (_ColorStart, _ColorEnd, i.uv.x));
+ //               t = frac(t);
+                float2 t = cos ( i.uv.xy * TAU * 2 ) * 0.5 +  0.5 ;
+                return float4( t, 0,1 );
+              //  float4 ColorGradient = lerp ( _ColorA, _ColorB, t );
+              // return ColorGradient;
             }
             ENDCG
         }

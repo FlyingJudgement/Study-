@@ -22,8 +22,8 @@ Material:
     m_Floats:
     - ColorEnd: 0
     - ColorStart: 1
-    - _ColorEnd: 0
-    - _ColorStart: 0.53
+    - _ColorEnd: 0.7
+    - _ColorStart: 1
     - _Value: 1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
